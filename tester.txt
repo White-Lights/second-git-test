@@ -1,0 +1,3 @@
+Testing out how to create a new repo on git hub after doing all the work on a local PC. I know I'm 
+supposed to get and connect the repo to GitHub before in standard workflow but it's good to practice 
+for all possibilities to here I am, testing it!
