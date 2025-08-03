@@ -4,12 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Test</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
 </head>
 
 <body>
-<p class="box-one">Box 1</p>
+<script>
+  const people = [
+    {
+      name: "Carly",
+      yearOfBirth: 1942},
+    {
+      name: "Ray",
+      yearOfBirth: 1962,
+      yearOfDeath: 2011,
+    },
+    {
+      name: "Jane",
+      yearOfBirth: 1912,
+      yearOfDeath: 1941,
+    }
+  ]
 
-<p class="box-two">Box 2</p>
+  function findTheOldest(people) {
+    people.forEach((person) => {
+        if(person.yearOfDeath == undefined) {
+            person.yearOfDeath = new Date().getFullYear();
+        }
+        person.age = person.yearOfDeath - person.yearOfBirth;
+    })
+    people.sort(compare);
+    console.log(people)
+  };
+  
+  function compare(a, b) {
+    if (a.age < b.age) return 1; // if the first value is greater than the second
+    if (a.age == b.age) return 0; // if values are equal
+    if (a.age > b.age) return -1; // if the first value is less than the second
+  }
+
+
+</script>
 </body>
 </html>
